@@ -13,6 +13,7 @@ For more information, please visit the [Centers for Disease Control and Preventi
 -   [Node](https://nodejs.org/en/)
 -   [Express](https://expressjs.com/)
 -   [Datawrapper API](https://developer.datawrapper.de/)
+-   [Redis](https://redis.io/)
 
 ## Resources 📒
 
