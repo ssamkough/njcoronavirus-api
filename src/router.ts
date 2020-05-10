@@ -22,6 +22,6 @@ apiRouter.get('/datawrapper/me', wrapAsync(datawrapperController.me));
 apiRouter.get('/datawrapper/charts', wrapAsync(datawrapperController.listCharts));
 apiRouter.get('/datawrapper/chart/:id', wrapAsync(datawrapperController.showChart));
 apiRouter.get('/datawrapper/chart/:id/data', wrapAsync(datawrapperController.showChartData));
-apiRouter.put('/datawrapper/chart/:id/data', wrapAsync(datawrapperController.updateChartData));
+apiRouter.post('/datawrapper/chart/:id/data', wrapAsync(datawrapperController.updateChartData));
 
 export default apiRouter;
