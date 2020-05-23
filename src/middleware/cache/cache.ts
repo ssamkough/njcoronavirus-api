@@ -13,8 +13,6 @@ const cache = (req, res, next) => {
             return res.json(render(data, true));
         }
     });
-
-    next();
 };
 
 export default cache;
