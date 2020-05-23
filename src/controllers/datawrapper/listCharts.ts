@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const listCharts = async (req, res, next) => {
+    const redisClient = req.redisClient;
     const url: string = 'https://api.datawrapper.de/v3/charts';
 
     const charts = await axios.get(url, {
@@ -8,6 +9,9 @@ const listCharts = async (req, res, next) => {
             Authorization: `Bearer ${process.env.DATAWRAPPER_API}`,
         },
     });
+
+    const chartData: string = JSON.stringify(charts.data);
+    redisClient.setex(req.url, 3600, chartData);
 
     res.json(render(charts.data));
 };
