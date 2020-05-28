@@ -2,6 +2,7 @@ import express from 'express';
 
 import controller from './controllers';
 
+const scraperController = controller.scraper;
 const datawrapperController = controller.datawrapper;
 
 const apiRouter = express.Router();
@@ -17,6 +18,11 @@ apiRouter.get('/', (req, res) => {
 });
 
 /* public routes */
+// scraper
+apiRouter.get('/scraper/county-numbers', wrapAsync(scraperController.listCountyNumbers));
+apiRouter.get('/scraper/state-cases', wrapAsync(scraperController.listStateCases));
+apiRouter.get('/scraper/state-deaths', wrapAsync(scraperController.listStateDeaths));
+
 // datawrapper
 apiRouter.get('/datawrapper/me', wrapAsync(datawrapperController.me));
 apiRouter.get('/datawrapper/charts', wrapAsync(datawrapperController.listCharts));
