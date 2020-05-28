@@ -48,5 +48,7 @@ Pictures and information written about COVID-19 are not done by me. Credit goes 
 
 ## Todo ☑️
 
+-   Finish scripts that gets all data (county cases, total state cases, total state deaths) and pushes them to csv
+-   Be able to automate description for both charts
 -   Have every route that shows data to have a redis cache
 -   Host this on the web
