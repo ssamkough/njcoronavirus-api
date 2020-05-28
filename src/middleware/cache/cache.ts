@@ -11,6 +11,8 @@ const cache = (req, res, next) => {
 
         if (data !== null) {
             return res.json(render(data, true));
+        } else {
+            next();
         }
     });
 };
