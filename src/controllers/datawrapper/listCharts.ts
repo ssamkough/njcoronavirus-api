@@ -22,4 +22,5 @@ const render = (charts) => {
         data: charts,
     };
 };
+
 export default listCharts;
